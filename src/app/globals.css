@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 28px;
+  }
+  body {
+    background: #f3f4f0;
+    color: #252a23;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+  }
+  button {
+    cursor: pointer;
+  }
+  button:disabled {
+    cursor: wait;
+    opacity: 0.6;
+  }
+  button,
+  a,
+  input,
+  select,
+  [tabindex] {
+    outline-offset: 5px;
+  }
+  :focus-visible {
+    outline: 2px solid #546b3b;
+  }
+  svg {
+    flex-shrink: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
